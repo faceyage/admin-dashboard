@@ -10,18 +10,20 @@
 }
 
 :root {
-    --bg-color: #DCDCDC;
-    --bg-color2: #1992D4;
-    --bg-color3: white;
+    --bg-color: #404040;
+    --bg-color2: #2B2F31;
+    --bg-color3: #202324;
 }
 
 body {
     font-family: 'Roboto';
+    color: white;
 }
 .main {
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 300px 1fr;
+    height: 100vh;
 }
 
 /* header */
@@ -32,6 +34,7 @@ body {
     gap: 20px;
     padding: 20px;
     align-items: center;
+    background-color: var(--bg-color3);
 }
 
 
@@ -42,6 +45,7 @@ body {
 }
 
 .search-container > input {
+    color: white;
     border: none;
     padding: 5px;
     background-color: var(--bg-color);
@@ -131,35 +135,26 @@ body {
     gap: 1em;
 }
 
-/* .dashboard {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-} */
-
-.dashboard > h2{
-    
-    display: inline;
-}
-
-
 /* content */
 
 .content {    
     display: grid;
+    gap: 30px;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
     padding: 30px 10px;
     background-color: var(--bg-color);
 }
 
 .content h3 {
-    grid-row: 1;
+    grid-column: 1 / -1;
 }
 
 .cards {
-    grid-row: 2 / 3;
+    grid-row: 2 / -1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .card {
@@ -169,8 +164,8 @@ body {
     background-color: var(--bg-color3);
     border-left: 10px solid #F0B428;
     border-radius: 0.5rem;
-    height: 200px;
-    width: 370px;
+    /* height: 200px;
+    width: 370px; */
 }
 
 .card h2, .content h3 {
@@ -180,6 +175,8 @@ body {
 
 .card .buttons {
     justify-self: end;
+    align-self: end;
+    margin-bottom: 20px;
 }
 
 /* content > announcements */
@@ -190,8 +187,8 @@ body {
     gap: 5px;
     background-color: var(--bg-color3);
     padding: 30px 20px;
-    /* height: 60%; */
-    width: 70%;
+    height: 93%;
+    width: 80%;
     border-radius: 0.5rem;
 }
 
@@ -199,14 +196,17 @@ body {
     font-weight: bold;
 }
 /* content > trendings */
+.trendings {
+    grid-column: 2 / 3;
+}
+
 .trending-cards {
     display: flex;
     flex-direction: column;
     gap: 13px;
     background-color: var(--bg-color3);
     padding: 30px 20px;
-    /* height: 60%; */
-    width: 70%;
+    width: 80%;
     border-radius: 0.5rem;
 }
 
