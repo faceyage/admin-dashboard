@@ -13,6 +13,7 @@
     --bg-color: #404040;
     --bg-color2: #2B2F31;
     --bg-color3: #202324;
+    --shadow-color: #2B2F31;
 }
 
 body {
@@ -35,6 +36,8 @@ body {
     padding: 20px;
     align-items: center;
     background-color: var(--bg-color3);
+    position: relative;
+    box-shadow: 7px 10px 20px var(--shadow-color);
 }
 
 
@@ -164,8 +167,7 @@ body {
     background-color: var(--bg-color3);
     border-left: 10px solid #F0B428;
     border-radius: 0.5rem;
-    /* height: 200px;
-    width: 370px; */
+    box-shadow: 7px 10px 20px var(--shadow-color);
 }
 
 .card h2, .content h3 {
@@ -190,6 +192,8 @@ body {
     height: 93%;
     width: 80%;
     border-radius: 0.5rem;
+    box-shadow: 7px 10px 20px var(--shadow-color);
+
 }
 
 .announcement-cards h5 {
@@ -208,6 +212,8 @@ body {
     padding: 30px 20px;
     width: 80%;
     border-radius: 0.5rem;
+    box-shadow: 7px 10px 20px var(--shadow-color);
+
 }
 
 .user-card {
